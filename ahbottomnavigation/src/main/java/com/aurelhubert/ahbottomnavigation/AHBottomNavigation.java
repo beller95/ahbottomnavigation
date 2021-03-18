@@ -424,7 +424,7 @@ public class AHBottomNavigation extends FrameLayout {
 					view.setSelected(true);
 				}
 				icon.setSelected(true);
-				container.setActivated(true);
+				if(container != null) { container.setActivated(true); }
 				// Update margins (icon & notification)
 				if (view.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
 					ViewGroup.MarginLayoutParams p = (ViewGroup.MarginLayoutParams) icon.getLayoutParams();
@@ -439,7 +439,7 @@ public class AHBottomNavigation extends FrameLayout {
 				}
 			} else {
 				icon.setSelected(false);
-				container.setActivated(false);
+				if(container != null) { container.setActivated(false); }
 				ViewGroup.MarginLayoutParams paramsNotification = (ViewGroup.MarginLayoutParams)
 						notification.getLayoutParams();
 				paramsNotification.setMargins(notificationInactiveMarginLeft, paramsNotification.topMargin,
@@ -554,7 +554,7 @@ public class AHBottomNavigation extends FrameLayout {
 					view.setSelected(true);
 				}
 				icon.setSelected(true);
-				container.setActivated(true);
+				if(container != null) { container.setActivated(true); }
 				// Update margins (icon & notification)
 
 				if (titleState != TitleState.ALWAYS_HIDE) {
@@ -572,7 +572,7 @@ public class AHBottomNavigation extends FrameLayout {
 				}
 			} else {
 				icon.setSelected(false);
-				container.setActivated(false);
+				if(container != null) { container.setActivated(false); }
 				ViewGroup.MarginLayoutParams paramsNotification = (ViewGroup.MarginLayoutParams)
 						notification.getLayoutParams();
 				paramsNotification.setMargins(notificationInactiveMarginLeft, notificationInactiveMarginTop,
@@ -680,7 +680,7 @@ public class AHBottomNavigation extends FrameLayout {
 				final TextView notification = (TextView) view.findViewById(R.id.bottom_navigation_notification);
 
 				icon.setSelected(true);
-				container.setActivated(true);
+				if(container != null) { container.setActivated(true); }
 				AHHelper.updateTopMargin(icon, inactiveMarginTop, activeMarginTop);
 				AHHelper.updateLeftMargin(notification, notificationInactiveMarginLeft, notificationActiveMarginLeft);
 				AHHelper.updateTextColor(title, itemInactiveColor, itemActiveColor);
@@ -745,7 +745,7 @@ public class AHBottomNavigation extends FrameLayout {
 				final TextView notification = (TextView) view.findViewById(R.id.bottom_navigation_notification);
 
 				icon.setSelected(false);
-				container.setActivated(false);
+				if(container != null) { container.setActivated(false); }
 				AHHelper.updateTopMargin(icon, activeMarginTop, inactiveMarginTop);
 				AHHelper.updateLeftMargin(notification, notificationActiveMarginLeft, notificationInactiveMarginLeft);
 				AHHelper.updateTextColor(title, itemActiveColor, itemInactiveColor);
@@ -808,7 +808,7 @@ public class AHBottomNavigation extends FrameLayout {
 				final TextView notification = (TextView) view.findViewById(R.id.bottom_navigation_notification);
 
 				icon.setSelected(true);
-				container.setActivated(true);
+				if(container != null) { container.setActivated(true); }
 
 				if (titleState != TitleState.ALWAYS_HIDE) {
 					AHHelper.updateTopMargin(icon, inactiveMargin, activeMarginTop);
@@ -878,7 +878,7 @@ public class AHBottomNavigation extends FrameLayout {
 				final TextView notification = (TextView) view.findViewById(R.id.bottom_navigation_notification);
 
 				icon.setSelected(false);
-				container.setActivated(false);
+				if(container != null) { container.setActivated(false); }
 
 				if (titleState != TitleState.ALWAYS_HIDE) {
 					AHHelper.updateTopMargin(icon, activeMarginTop, inactiveMargin);
