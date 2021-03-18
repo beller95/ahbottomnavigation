@@ -424,7 +424,7 @@ public class AHBottomNavigation extends FrameLayout {
 					view.setSelected(true);
 				}
 				icon.setSelected(true);
-				container.isActivated(true);
+				view.isActivated(true);
 				// Update margins (icon & notification)
 				if (view.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
 					ViewGroup.MarginLayoutParams p = (ViewGroup.MarginLayoutParams) icon.getLayoutParams();
@@ -439,7 +439,7 @@ public class AHBottomNavigation extends FrameLayout {
 				}
 			} else {
 				icon.setSelected(false);
-				container.isActivated(false);
+				view.isActivated(false);
 				ViewGroup.MarginLayoutParams paramsNotification = (ViewGroup.MarginLayoutParams)
 						notification.getLayoutParams();
 				paramsNotification.setMargins(notificationInactiveMarginLeft, paramsNotification.topMargin,
