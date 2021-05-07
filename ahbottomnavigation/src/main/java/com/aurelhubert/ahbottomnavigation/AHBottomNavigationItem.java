@@ -19,7 +19,7 @@ public class AHBottomNavigationItem {
 	
 	private String title = "";
 	private Drawable drawable;
-	private int color = Color.GRAY;
+	private int color = Color.TRANSPARENT;
 	
 	private
 	@StringRes
