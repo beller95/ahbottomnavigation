@@ -765,8 +765,8 @@ public class AHBottomNavigation extends FrameLayout {
 
 				icon.setSelected(false);
 				if(container != null) {
-					container.setActivated(false);
-					container.setSelected(false);
+					container.setActivated(true);
+					container.setSelected(true);
 				}
 				AHHelper.updateTopMargin(icon, activeMarginTop, inactiveMarginTop);
 				AHHelper.updateLeftMargin(notification, notificationActiveMarginLeft, notificationInactiveMarginLeft);
@@ -904,8 +904,8 @@ public class AHBottomNavigation extends FrameLayout {
 
 				icon.setSelected(false);
 				if(container != null) {
-					container.setActivated(false);
-					container.setSelected(false);
+					container.setActivated(true);
+					container.setSelected(true);
 				}
 
 				if (titleState != TitleState.ALWAYS_HIDE) {
