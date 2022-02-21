@@ -595,6 +595,8 @@ public class AHBottomNavigation extends FrameLayout {
 				if (i == currentItem) {
 					setBackgroundColor(item.getColor(context));
 					currentColor = item.getColor(context);
+					container.setActivated(false);
+					container.setSelected(false);
 				}
 			} else {
 				if (defaultBackgroundResource != 0) {
