@@ -421,7 +421,8 @@ public class AHBottomNavigation extends FrameLayout {
 
 			if (current) {
 				if (selectedBackgroundVisible) {
-					view.setSelected(true);
+					view.setSelected(i == itemIndex);
+					view.setActivated(i == itemIndex);
 				}
 				icon.setSelected(true);
 				if(container != null) {
@@ -559,7 +560,8 @@ public class AHBottomNavigation extends FrameLayout {
 
 			if (i == currentItem) {
 				if (selectedBackgroundVisible) {
-					view.setSelected(true);
+					view.setSelected(i == itemIndex);
+					view.setActivated(i == itemIndex);
 				}
 				icon.setSelected(true);
 				if(container != null) {
@@ -686,6 +688,7 @@ public class AHBottomNavigation extends FrameLayout {
 			final View view = views.get(i);
 			if (selectedBackgroundVisible) {
 				view.setSelected(i == itemIndex);
+				view.setActivated(i == itemIndex);
 			}
 
 			if (i == itemIndex) {
@@ -765,8 +768,8 @@ public class AHBottomNavigation extends FrameLayout {
 
 				icon.setSelected(false);
 				if(container != null) {
-					container.setActivated(true);
-					container.setSelected(true);
+					container.setActivated(false);
+					container.setSelected(false);
 				}
 				AHHelper.updateTopMargin(icon, activeMarginTop, inactiveMarginTop);
 				AHHelper.updateLeftMargin(notification, notificationActiveMarginLeft, notificationInactiveMarginLeft);
@@ -820,6 +823,7 @@ public class AHBottomNavigation extends FrameLayout {
 			final View view = views.get(i);
 			if (selectedBackgroundVisible) {
 				view.setSelected(i == itemIndex);
+				view.setActivated(i == itemIndex);
 			}
 
 			if (i == itemIndex) {
@@ -904,8 +908,8 @@ public class AHBottomNavigation extends FrameLayout {
 
 				icon.setSelected(false);
 				if(container != null) {
-					container.setActivated(true);
-					container.setSelected(true);
+					container.setActivated(false);
+					container.setSelected(false);
 				}
 
 				if (titleState != TitleState.ALWAYS_HIDE) {
